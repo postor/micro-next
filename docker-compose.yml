@@ -1,0 +1,16 @@
+services:
+  greeter:
+    build: .
+    environment: 
+      - SERVICE_NAME=greeter
+      - NATS=nats://nats
+  server:
+    build: .
+    environment: 
+      - SERVICE_NAME=server
+      - NATS=nats://nats
+    ports: 
+      - "3000:3000"
+
+  nats:
+    image: nats

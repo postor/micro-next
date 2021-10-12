@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env DEV_MODE=true ts-node -P tsconfig.server.json server/services/server.ts",
     "build": "next build && tsc -P tsconfig.server.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .server/server/services/index.js"
   },
   "repository": {
     "type": "git",
